@@ -12,6 +12,8 @@
 		5BE8C99626B6B99D0090DF9D /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99526B6B99D0090DF9D /* FeedViewController.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
 		5BE8C99E26B6B99F0090DF9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99C26B6B99F0090DF9D /* LaunchScreen.storyboard */; };
+		5BE8C9A626B6BDEB0090DF9D /* UIViewController+FeedbackLoop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9A526B6BDEB0090DF9D /* UIViewController+FeedbackLoop.swift */; };
+		5BE8C9A826B6BE360090DF9D /* FeedbackLoopSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE8C99D26B6B99F0090DF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE8C99F26B6B99F0090DF9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5BE8C9A526B6BDEB0090DF9D /* UIViewController+FeedbackLoop.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+FeedbackLoop.swift"; sourceTree = "<group>"; };
+		5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackLoopSystem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 				5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */,
 				5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */,
 				5BE8C99526B6B99D0090DF9D /* FeedViewController.swift */,
+				5BE8C9A526B6BDEB0090DF9D /* UIViewController+FeedbackLoop.swift */,
+				5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */,
 				5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */,
 				5BE8C99C26B6B99F0090DF9D /* LaunchScreen.storyboard */,
 				5BE8C99F26B6B99F0090DF9D /* Info.plist */,
@@ -133,7 +139,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE8C9A826B6BE360090DF9D /* FeedbackLoopSystem.swift in Sources */,
 				5BE8C99626B6B99D0090DF9D /* FeedViewController.swift in Sources */,
+				5BE8C9A626B6BDEB0090DF9D /* UIViewController+FeedbackLoop.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
 			);
