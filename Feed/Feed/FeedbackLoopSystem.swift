@@ -9,11 +9,12 @@ import Foundation
 
 class FeedbackLoopSystem<State: Equatable, Event> {
     typealias Feedback = (_ newState: State, _ oldState: State, _ completion: (Event) -> Void) -> Void
-    var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
     
-    var state: State
-    let reducer: (State, Event) -> State
-    let feedbacks: [Feedback]
+    private var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
+    
+    private var state: State
+    private let reducer: (State, Event) -> State
+    private let feedbacks: [Feedback]
     
     init(initialState: State,
          reducer: @escaping (State, Event) -> State,
