@@ -18,7 +18,7 @@ protocol FeedbackLoopable: AnyObject {
     var feedbackLoopSystem: FeedbackLoopSystem<State, Event>? { get set }
     
     static func reduce(state: State, event: Event) -> State
-    func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void)
+    func bindUI(_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void)
     func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback]
 }
 
@@ -34,7 +34,7 @@ extension FeedbackLoopable {
 
 extension FeedbackLoopable {
     fileprivate func bindUIClosure() -> FeedbackLoopSystem<State, Event>.Feedback {
-        { [weak self] (_ newState: State, _ oldState: State, _ completion: (Event) -> Void) in
+        { [weak self] (_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void) in
             guard let __self = self else { return }
             __self.bindUI(newState, oldState, completion)
         }

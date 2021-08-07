@@ -8,7 +8,7 @@
 import Foundation
 
 class FeedbackLoopSystem<State: Equatable, Event> {
-    typealias Feedback = (_ newState: State, _ oldState: State, _ completion: (Event) -> Void) -> Void
+    typealias Feedback = (_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void) -> Void
     
     private var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
     

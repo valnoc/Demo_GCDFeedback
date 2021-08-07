@@ -13,6 +13,8 @@
 		5B66FDEC26BEC5CF0009F4D2 /* ListVC+BindUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE626BEC5CF0009F4D2 /* ListVC+BindUI.swift */; };
 		5B66FDED26BEC5CF0009F4D2 /* ListVC+Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */; };
 		5B66FDEE26BEC5CF0009F4D2 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */; };
+		5B66FDF326BECD0B0009F4D2 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */; };
+		5B66FDF526BED1390009F4D2 /* ListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */; };
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
 		5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
@@ -26,6 +28,8 @@
 		5B66FDE626BEC5CF0009F4D2 /* ListVC+BindUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+BindUI.swift"; sourceTree = "<group>"; };
 		5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+Feedbacks.swift"; sourceTree = "<group>"; };
 		5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorImpl.swift; sourceTree = "<group>"; };
 		5BE8C98E26B6B99D0090DF9D /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,7 @@
 			children = (
 				5B66FDE426BEC5CF0009F4D2 /* FeedbackLoop */,
 				5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */,
+				5B66FDF126BECD0B0009F4D2 /* Interactor */,
 			);
 			path = List;
 			sourceTree = "<group>";
@@ -71,6 +76,15 @@
 				5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */,
 			);
 			path = FeedbackLoop;
+			sourceTree = "<group>";
+		};
+		5B66FDF126BECD0B0009F4D2 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */,
+				5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */,
+			);
+			path = Interactor;
 			sourceTree = "<group>";
 		};
 		5BE8C98526B6B99D0090DF9D = {
@@ -146,6 +160,8 @@
 				Base,
 			);
 			mainGroup = 5BE8C98526B6B99D0090DF9D;
+			packageReferences = (
+			);
 			productRefGroup = 5BE8C98F26B6B99D0090DF9D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -172,9 +188,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5B66FDF326BECD0B0009F4D2 /* ListInteractor.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
 				5B66FDEC26BEC5CF0009F4D2 /* ListVC+BindUI.swift in Sources */,
 				5B66FDEB26BEC5CF0009F4D2 /* ListVC+State.swift in Sources */,
+				5B66FDF526BED1390009F4D2 /* ListInteractorImpl.swift in Sources */,
 				5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */,
 				5B66FDEE26BEC5CF0009F4D2 /* ListVC.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,

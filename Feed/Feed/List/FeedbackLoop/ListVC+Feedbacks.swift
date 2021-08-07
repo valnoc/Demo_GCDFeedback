@@ -9,10 +9,14 @@ import Foundation
 
 extension ListVC {
     func feedbacks() -> [FeedbackLoopSystem<_State, _Event>.Feedback] {
-        [feedback1]
+        [loadItems]
     }
     
-    func feedback1(_ newState: State, _ oldState: State, _ completion: (Event) -> Void) {
-        
+    func loadItems(_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void) {
+        guard !oldState.requests.contains(.loadList),
+              newState.requests.contains(.loadList) else { return }
+        interactor.loadItems { items in
+            completion(.didLoadItems(items, .loadList))
+        }
     }
 }
