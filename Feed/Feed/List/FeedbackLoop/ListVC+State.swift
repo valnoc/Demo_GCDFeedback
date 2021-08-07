@@ -10,7 +10,7 @@ import Foundation
 extension ListVC {
     struct _State: FeedbackLoopableState {
         var title: String
-//        var items: [FeedItem]
+        var items: [FeedItem]
         
         var requests: Set<Request>
         
@@ -20,7 +20,7 @@ extension ListVC {
         
         static func initial() -> Self {
             .init(title: "Список постов",
-//                  items: [],
+                  items: [],
                   requests: [])
         }
     }
@@ -41,7 +41,7 @@ extension ListVC {
             state.requests.insert(.loadList)
         case let .didLoadItems(value, request):
             state.requests.remove(request)
-//            state.items = value
+            state.items = value
         }
         return state
     }
