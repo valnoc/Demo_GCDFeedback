@@ -15,16 +15,28 @@ protocol FeedbackLoopable: AnyObject {
     associatedtype State: FeedbackLoopableState
     associatedtype Event
     
-    var system: FeedbackLoopSystem<State, Event>? { get set }
+    var feedbackLoopSystem: FeedbackLoopSystem<State, Event>? { get set }
     
     static func reduce(state: State, event: Event) -> State
-    func handleNewState(_ state: State)
+    func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void)
+    func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback]
 }
 
 extension FeedbackLoopable {
-    func driveSystem() {
-        system = FeedbackLoopSystem(initialState: State.initial(),
-                                    reducer: Self.reduce,
-                                    feedbacks: [])
+    func driveFeedbackLoopSystem() {
+        feedbackLoopSystem = .init(initialState: State.initial(),
+                                   reducer: Self.reduce,
+                                   feedbacks: feedbacks() + [bindUIClosure()])
+    }
+    
+    func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void) { }
+}
+
+extension FeedbackLoopable {
+    fileprivate func bindUIClosure() -> FeedbackLoopSystem<State, Event>.Feedback {
+        { [weak self] (_ newState: State, _ oldState: State, _ completion: (Event) -> Void) in
+            guard let __self = self else { return }
+            __self.bindUI(newState, oldState, completion)
+        }
     }
 }

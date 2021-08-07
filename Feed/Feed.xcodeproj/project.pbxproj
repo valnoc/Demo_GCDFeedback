@@ -9,23 +9,29 @@
 /* Begin PBXBuildFile section */
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
 		5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */; };
-		5BE8C99626B6B99D0090DF9D /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99526B6B99D0090DF9D /* ListViewController.swift */; };
+		5BE8C99626B6B99D0090DF9D /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99526B6B99D0090DF9D /* ListVC.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
 		5BE8C99E26B6B99F0090DF9D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99C26B6B99F0090DF9D /* LaunchScreen.storyboard */; };
 		5BE8C9A626B6BDEB0090DF9D /* FeedbackLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9A526B6BDEB0090DF9D /* FeedbackLoopable.swift */; };
 		5BE8C9A826B6BE360090DF9D /* FeedbackLoopSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */; };
+		5BE8C9AA26B6CD450090DF9D /* ListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9A926B6CD450090DF9D /* ListVC+State.swift */; };
+		5BE8C9AE26B6D0FF0090DF9D /* ListVC+BindUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9AB26B6D0FF0090DF9D /* ListVC+BindUI.swift */; };
+		5BE8C9B026B6D0FF0090DF9D /* ListVC+Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C9AD26B6D0FF0090DF9D /* ListVC+Feedbacks.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5BE8C98E26B6B99D0090DF9D /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5BE8C99526B6B99D0090DF9D /* ListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		5BE8C99526B6B99D0090DF9D /* ListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5BE8C99D26B6B99F0090DF9D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5BE8C99F26B6B99F0090DF9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5BE8C9A526B6BDEB0090DF9D /* FeedbackLoopable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackLoopable.swift; sourceTree = "<group>"; };
 		5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedbackLoopSystem.swift; sourceTree = "<group>"; };
+		5BE8C9A926B6CD450090DF9D /* ListVC+State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ListVC+State.swift"; sourceTree = "<group>"; };
+		5BE8C9AB26B6D0FF0090DF9D /* ListVC+BindUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+BindUI.swift"; sourceTree = "<group>"; };
+		5BE8C9AD26B6D0FF0090DF9D /* ListVC+Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+Feedbacks.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +66,10 @@
 			children = (
 				5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */,
 				5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */,
-				5BE8C99526B6B99D0090DF9D /* ListViewController.swift */,
+				5BE8C99526B6B99D0090DF9D /* ListVC.swift */,
+				5BE8C9A926B6CD450090DF9D /* ListVC+State.swift */,
+				5BE8C9AB26B6D0FF0090DF9D /* ListVC+BindUI.swift */,
+				5BE8C9AD26B6D0FF0090DF9D /* ListVC+Feedbacks.swift */,
 				5BE8C9A526B6BDEB0090DF9D /* FeedbackLoopable.swift */,
 				5BE8C9A726B6BE360090DF9D /* FeedbackLoopSystem.swift */,
 				5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */,
@@ -139,11 +148,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BE8C9AA26B6CD450090DF9D /* ListVC+State.swift in Sources */,
 				5BE8C9A826B6BE360090DF9D /* FeedbackLoopSystem.swift in Sources */,
-				5BE8C99626B6B99D0090DF9D /* ListViewController.swift in Sources */,
+				5BE8C99626B6B99D0090DF9D /* ListVC.swift in Sources */,
 				5BE8C9A626B6BDEB0090DF9D /* FeedbackLoopable.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
+				5BE8C9B026B6D0FF0090DF9D /* ListVC+Feedbacks.swift in Sources */,
+				5BE8C9AE26B6D0FF0090DF9D /* ListVC+BindUI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
