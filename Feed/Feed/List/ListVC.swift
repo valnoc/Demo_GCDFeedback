@@ -8,9 +8,9 @@
 import UIKit
 
 class ListVC: UIViewController, FeedbackLoopable {
-    typealias State = _State
-    typealias Event = _Event
-    var feedbackLoopSystem: FeedbackLoopSystem<_State, _Event>?
+    typealias TState = State
+    typealias TEvent = Event
+    var feedbackLoopSystem: FeedbackLoopSystem<State, Event>?
     
     let interactor: ListInteractor
     

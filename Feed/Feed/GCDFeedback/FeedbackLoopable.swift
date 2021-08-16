@@ -12,29 +12,29 @@ protocol FeedbackLoopableState: Equatable {
 }
 
 protocol FeedbackLoopable: AnyObject {
-    associatedtype State: FeedbackLoopableState
-    associatedtype Event
+    associatedtype TState: FeedbackLoopableState
+    associatedtype TEvent
     
-    var feedbackLoopSystem: FeedbackLoopSystem<State, Event>? { get set }
+    var feedbackLoopSystem: FeedbackLoopSystem<TState, TEvent>? { get set }
     
-    static func reduce(state: State, event: Event) -> State
-    func bindUI(_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void)
-    func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback]
+    static func reduce(state: TState, event: TEvent) -> TState
+    func bindUI(_ newState: TState, _ oldState: TState, _ completion: @escaping (TEvent) -> Void)
+    func feedbacks() -> [FeedbackLoopSystem<TState, TEvent>.Feedback]
 }
 
 extension FeedbackLoopable {
     func driveFeedbackLoopSystem() {
-        feedbackLoopSystem = .init(initialState: State.initial(),
+        feedbackLoopSystem = .init(initialState: TState.initial(),
                                    reducer: Self.reduce,
                                    feedbacks: feedbacks() + [bindUIClosure()])
     }
     
-    func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void) { }
+    func bindUI(_ newState: TState, _ oldState: TState, _ completion: (TEvent) -> Void) { }
 }
 
 extension FeedbackLoopable {
-    fileprivate func bindUIClosure() -> FeedbackLoopSystem<State, Event>.Feedback {
-        { [weak self] (_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void) in
+    fileprivate func bindUIClosure() -> FeedbackLoopSystem<TState, TEvent>.Feedback {
+        { [weak self] (_ newState: TState, _ oldState: TState, _ completion: @escaping (TEvent) -> Void) in
             guard let __self = self else { return }
             __self.bindUI(newState, oldState, completion)
         }

@@ -8,7 +8,7 @@
 import Foundation
 
 extension ListVC {
-    struct _State: FeedbackLoopableState {
+    struct State: FeedbackLoopableState {
         var title: String
         var items: [FeedItem]
         
@@ -27,14 +27,14 @@ extension ListVC {
 }
 
 extension ListVC {
-    enum _Event {
+    enum Event {
         case configure
         case didLoadItems(_ value: [FeedItem], _ request: State.Request)
     }
 }
 
 extension ListVC {
-    static func reduce(state: _State, event: _Event) -> _State {
+    static func reduce(state: State, event: Event) -> State {
         var state = state
         switch event {
         case .configure:

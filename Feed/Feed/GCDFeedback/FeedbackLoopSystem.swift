@@ -7,17 +7,17 @@
 
 import Foundation
 
-class FeedbackLoopSystem<State: Equatable, Event> {
-    typealias Feedback = (_ newState: State, _ oldState: State, _ completion: @escaping (Event) -> Void) -> Void
+class FeedbackLoopSystem<TState: Equatable, TEvent> {
+    typealias Feedback = (_ newState: TState, _ oldState: TState, _ completion: @escaping (TEvent) -> Void) -> Void
     
     private var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
     
-    private var state: State
-    private let reducer: (State, Event) -> State
+    private var state: TState
+    private let reducer: (TState, TEvent) -> TState
     private let feedbacks: [Feedback]
     
-    init(initialState: State,
-         reducer: @escaping (State, Event) -> State,
+    init(initialState: TState,
+         reducer: @escaping (TState, TEvent) -> TState,
          feedbacks: [Feedback]) {
         self.state = initialState
         self.reducer = reducer
@@ -26,7 +26,7 @@ class FeedbackLoopSystem<State: Equatable, Event> {
 }
 
 extension FeedbackLoopSystem {
-    func acceptEvent(_ event: Event) {
+    func acceptEvent(_ event: TEvent) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             

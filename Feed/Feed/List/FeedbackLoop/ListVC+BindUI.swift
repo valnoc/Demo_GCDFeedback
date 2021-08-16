@@ -8,7 +8,7 @@
 import Foundation
 
 extension ListVC {
-    func bindUI(_ newState: _State, _ oldState: _State, _ completion: (_Event) -> Void) {
+    func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void) {
         navigationItem.title = newState.title
     }
 }

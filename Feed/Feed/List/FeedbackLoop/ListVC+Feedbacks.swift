@@ -8,7 +8,7 @@
 import Foundation
 
 extension ListVC {
-    func feedbacks() -> [FeedbackLoopSystem<_State, _Event>.Feedback] {
+    func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback] {
         [loadItems]
     }
     
