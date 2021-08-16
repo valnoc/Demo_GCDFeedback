@@ -23,7 +23,9 @@ class ListVC: UIViewController, FeedbackLoopable {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
+    override func loadView() {
+        view = ListView()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

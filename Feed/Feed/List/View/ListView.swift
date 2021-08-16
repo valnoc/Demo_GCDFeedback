@@ -20,10 +20,10 @@ class ListView: UIView {
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         addSubview(tableView)
-        addConstraints([tableView.topAnchor.constraint(equalTo: topAnchor),
-                        tableView.topAnchor.constraint(equalTo: topAnchor),
-                        tableView.topAnchor.constraint(equalTo: topAnchor),
-                        tableView.topAnchor.constraint(equalTo: topAnchor)])
+        NSLayoutConstraint.activate([tableView.topAnchor.constraint(equalTo: topAnchor),
+                                     tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
+                                     tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
+                                     tableView.bottomAnchor.constraint(equalTo: bottomAnchor)])
     }
     
     required init?(coder: NSCoder) {
