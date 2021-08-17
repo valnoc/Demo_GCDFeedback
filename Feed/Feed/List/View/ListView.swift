@@ -33,11 +33,13 @@ class ListView: UIView {
     }
     
     private var vmsCache: [ListItemCellVM] = []
+    private var action: ((ListVC.Event) -> Void)?
 }
 
 extension ListView {
-    func updateList(_ vms: [ListItemCellVM]) {
+    func updateList(_ vms: [ListItemCellVM], action: @escaping (ListVC.Event) -> Void) {
         vmsCache = vms
+        self.action = action
         tableView.reloadData()
     }
 }
@@ -57,5 +59,8 @@ extension ListView: UITableViewDataSource {
 
 // MARK: - UITableViewDelegate
 extension ListView: UITableViewDelegate {
-    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let item = vmsCache[indexPath.row].userInfo as? FeedItem else { return }
+        action?(.didSelectItem(item))
+    }
 }

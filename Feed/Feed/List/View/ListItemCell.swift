@@ -10,6 +10,8 @@ import UIKit
 struct ListItemCellVM {
     let title: String
     let text: String
+    
+    let userInfo: Any
 }
 
 class ListItemCell: UITableViewCell {

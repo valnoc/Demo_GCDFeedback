@@ -14,10 +14,6 @@ extension ListVC {
         
         var requests: Set<Request>
         
-        enum Request: Equatable {
-            case loadList
-        }
-        
         static func initial() -> Self {
             .init(title: "Список постов",
                   items: [],
@@ -30,6 +26,8 @@ extension ListVC {
     enum Event {
         case configure
         case didLoadItems(_ value: [FeedItem], _ request: State.Request)
+        case didSelectItem(_ item: FeedItem)
+        case didRouteToItem(_ request: State.Request)
     }
 }
 
@@ -42,7 +40,38 @@ extension ListVC {
         case let .didLoadItems(value, request):
             state.requests.remove(request)
             state.items = value
+        case let .didSelectItem(item):
+            state.requests.insert(.routeToItem(item.id))
+        case let .didRouteToItem(request):
+            state.requests.remove(request)
         }
         return state
+    }
+}
+
+extension ListVC.State {
+    enum Request: Hashable {
+        case loadList
+        case routeToItem(_ itemId: String)
+        
+        func isRouteToItem() -> Bool {
+            switch self {
+            case .routeToItem:
+                return true
+            default:
+                return false
+            }
+        }
+        
+        static func ==(_ lhs: ListVC.State.Request, _ rhs: ListVC.State.Request) -> Bool {
+            switch (lhs, rhs) {
+            case (.loadList, .loadList):
+                return true
+            case let (.routeToItem(itemIdLhs), .routeToItem(itemIdRhs)):
+                return itemIdLhs == itemIdRhs
+            default:
+                return false
+            }
+        }
     }
 }
