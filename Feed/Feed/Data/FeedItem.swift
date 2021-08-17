@@ -11,8 +11,8 @@ struct FeedItem: Equatable, Codable {
     let title: String
     let author: String
     let date: Date
-    let text: String?
-    let imageUrl: String?
+    let text: String
+    let imageUrl: String
     
     static func ==(_ lhs: FeedItem, rhs: FeedItem) -> Bool {
         guard lhs.title == rhs.title else { return false }

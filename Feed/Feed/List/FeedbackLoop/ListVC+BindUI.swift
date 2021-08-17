@@ -9,6 +9,14 @@ import Foundation
 
 extension ListVC {
     func bindUI(_ newState: State, _ oldState: State, _ completion: (Event) -> Void) {
-        navigationItem.title = newState.title
+        DispatchQueue.main.sync {
+            navigationItem.title = newState.title
+            
+            if newState.items != oldState.items {
+                viewList?.updateList(newState.items
+                                        .map({ .init(title: $0.title,
+                                                     text: $0.text) }))
+            }
+        }
     }
 }

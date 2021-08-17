@@ -26,6 +26,10 @@ class ListVC: UIViewController, FeedbackLoopable {
     override func loadView() {
         view = ListView()
     }
+
+    var viewList: ListView? {
+        view as? ListView
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,6 +37,7 @@ class ListVC: UIViewController, FeedbackLoopable {
         view.backgroundColor = .white
         
         driveFeedbackLoopSystem()
+        feedbackLoopSystem?.acceptEvent(.configure)
     }
 
 

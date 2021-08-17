@@ -8,7 +8,7 @@
 import UIKit
 
 class ListView: UIView {
-    lazy var tableView: UITableView = {
+    private lazy var tableView: UITableView = {
         let item = UITableView()
         return item
     }()
@@ -24,23 +24,38 @@ class ListView: UIView {
                                      tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
                                      tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
                                      tableView.bottomAnchor.constraint(equalTo: bottomAnchor)])
+        
+        tableView.register(ListItemCell.self, forCellReuseIdentifier: "ListItemCell")
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    private var vmsCache: [ListItemCellVM] = []
 }
 
+extension ListView {
+    func updateList(_ vms: [ListItemCellVM]) {
+        vmsCache = vms
+        tableView.reloadData()
+    }
+}
+
+// MARK: - UITableViewDataSource
 extension ListView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        0
+        vmsCache.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        UITableViewCell()
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "ListItemCell", for: indexPath) as? ListItemCell else { return UITableViewCell() }
+        cell.update(vmsCache[indexPath.row])
+        return cell
     }
 }
 
+// MARK: - UITableViewDelegate
 extension ListView: UITableViewDelegate {
     
 }
