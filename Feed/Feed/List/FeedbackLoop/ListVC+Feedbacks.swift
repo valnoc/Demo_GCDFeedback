@@ -9,7 +9,7 @@ import Foundation
 
 extension ListVC {
     func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback] {
-        [loadItems, output, subscribeToAuthorized]
+        [bindUI, loadItems, output, subscribeToAuthorized]
     }
     
     func loadItems(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
