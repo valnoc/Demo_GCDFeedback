@@ -18,6 +18,7 @@ struct ListItemCellVM {
     let userInfo: Any
 }
 
+// MARK: - ListItemCell
 class ListItemCell: UITableViewCell {
     lazy var lbTitle: UILabel = {
         let element = UILabel()

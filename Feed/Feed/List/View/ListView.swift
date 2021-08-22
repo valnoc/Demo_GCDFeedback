@@ -60,6 +60,7 @@ extension ListView: UITableViewDataSource {
 // MARK: - UITableViewDelegate
 extension ListView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
         guard let item = vmsCache[indexPath.row].userInfo as? FeedItem else { return }
         action?(.didSelectItem(item))
     }
