@@ -25,9 +25,10 @@ extension ListVC {
 extension ListVC {
     enum Event {
         case configure
+        case didFinishRequest(_ request: State.Request)
         case didLoadItems(_ value: [FeedItem], _ request: State.Request)
         case didSelectItem(_ item: FeedItem)
-        case didFinishRequest(_ request: State.Request)
+        case didPressToggleLike(_ item: FeedItem)
     }
 }
 
@@ -49,6 +50,13 @@ extension ListVC {
             
         case let .didFinishRequest(request):
             state.requests.remove(request)
+            
+        case let .didPressToggleLike(item):
+            if let index = state.items.firstIndex(of: item) {
+                var item = item
+                item.liked.toggle()
+                state.items[index] = item
+            }
         }
         
         return state

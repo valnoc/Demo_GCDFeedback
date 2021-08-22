@@ -14,9 +14,12 @@ extension ListVC {
             
             if newState.items != oldState.items {
                 viewList?.updateList(newState.items
-                                        .map({ .init(title: $0.title,
-                                                     text: $0.text,
-                                                     userInfo: $0) }),
+                                        .map({ item in
+                                                .init(title: item.title,
+                                                      text: item.text,
+                                                      isLiked: item.liked,
+                                                      likeAction: { action(.didPressToggleLike(item)) },
+                                                      userInfo: item) }),
                                      action: action)
             }
         }
