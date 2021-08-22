@@ -33,19 +33,24 @@ extension ListVC {
 
 extension ListVC {
     static func reduce(state: State, event: Event) -> State {
-        print(event)
+        print("ListVC: \(event)")
         var state = state
+        
         switch event {
         case .configure:
             state.requests.insert(.loadList)
+            
         case let .didLoadItems(value, request):
             state.requests.remove(request)
             state.items = value
+            
         case let .didSelectItem(item):
             state.requests.insert(.output(.didSelectItem(item.id)))
+            
         case let .didFinishRequest(request):
             state.requests.remove(request)
         }
+        
         return state
     }
 }
