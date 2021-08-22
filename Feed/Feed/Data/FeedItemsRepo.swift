@@ -15,6 +15,7 @@ class FeedItemsRepo {
             let result = try JSONDecoder().decode([FeedItem].self, from: data)
             return result
         } catch {
+            print(error)
             return []
         }
     }
