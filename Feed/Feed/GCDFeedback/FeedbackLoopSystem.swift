@@ -7,6 +7,7 @@
 
 import Foundation
 
+// MARK: - FeedbackLoopSystem
 class FeedbackLoopSystem<TState: Equatable, TEvent> {
     typealias Feedback = (_ newState: TState, _ oldState: TState, _ completion: @escaping (TEvent) -> Void) -> Void
     
@@ -23,10 +24,8 @@ class FeedbackLoopSystem<TState: Equatable, TEvent> {
         self.reducer = reducer
         self.feedbacks = feedbacks
     }
-}
 
-extension FeedbackLoopSystem {
-    func acceptEvent(_ event: TEvent) {
+    fileprivate func acceptEvent(_ event: TEvent) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             
@@ -40,5 +39,27 @@ extension FeedbackLoopSystem {
                 self?.acceptEvent(event)
             }) }
         }
+    }
+}
+
+// MARK: - FeedbackLoopSystemInput
+class FeedbackLoopSystemInput<TState: Equatable, TEvent> {
+    weak var system: FeedbackLoopSystem<TState, TEvent>?
+    
+    private var fifo: [TEvent] = []
+    
+    func acceptEvent(_ event: TEvent) {
+        guard let system = system else {
+            fifo.append(event)
+            return
+        }
+        
+        system.acceptEvent(event)
+    }
+    
+    func flush() {
+        guard let system = system else { return }
+        fifo.forEach(system.acceptEvent(_:))
+        fifo.removeAll()
     }
 }

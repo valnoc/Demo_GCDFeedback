@@ -32,7 +32,7 @@ extension ListVC {
 }
 
 extension ListVC {
-    static func reduce(state: State, event: Event) -> State {
+    static func reduce(state: TState, event: TEvent) -> State {
         print("ListVC: \(event)")
         var state = state
         

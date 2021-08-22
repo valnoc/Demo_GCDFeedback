@@ -10,7 +10,8 @@ import UIKit
 class ListVC: UIViewController, FeedbackLoopable {
     typealias TState = State
     typealias TEvent = Event
-    var feedbackLoopSystem: FeedbackLoopSystem<State, Event>?
+    var feedbackLoopSystem: FeedbackLoopSystem<TState, TEvent>?
+    var feedbackLoopSystemInput: FeedbackLoopSystemInput<TState, TEvent> = .init()
     
     weak var output: ListScreenOutput?
     let interactor: ListInteractor
@@ -43,6 +44,6 @@ class ListVC: UIViewController, FeedbackLoopable {
 
 extension ListVC: ListScreenInput {
     func configure() {
-        feedbackLoopSystem?.acceptEvent(.configure)
+        feedbackLoopSystemInput.acceptEvent(.configure)
     }
 }

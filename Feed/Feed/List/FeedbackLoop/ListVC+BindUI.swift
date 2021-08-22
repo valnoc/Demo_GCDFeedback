@@ -8,7 +8,7 @@
 import Foundation
 
 extension ListVC {
-    func bindUI(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
+    func bindUI(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
         DispatchQueue.main.sync {
             navigationItem.title = newState.title
             

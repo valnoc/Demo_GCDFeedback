@@ -12,7 +12,7 @@ extension ListVC {
         [loadItems, output]
     }
     
-    func loadItems(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
+    func loadItems(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
         guard !oldState.requests.contains(.loadList),
               newState.requests.contains(.loadList) else { return }
         interactor.loadItems { items in
@@ -20,7 +20,7 @@ extension ListVC {
         }
     }
     
-    func output(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
+    func output(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
         guard oldState.requests.first(where: { $0.isOutput() }) == nil,
               case let .output(value) = newState.requests.first(where: { $0.isOutput() }) else { return }
         

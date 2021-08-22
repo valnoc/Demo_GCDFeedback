@@ -16,6 +16,7 @@ protocol FeedbackLoopable: AnyObject {
     associatedtype TEvent
     
     var feedbackLoopSystem: FeedbackLoopSystem<TState, TEvent>? { get set }
+    var feedbackLoopSystemInput: FeedbackLoopSystemInput<TState, TEvent> { get set }
     
     static func reduce(state: TState, event: TEvent) -> TState
     func bindUI(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void)
@@ -27,6 +28,8 @@ extension FeedbackLoopable {
         feedbackLoopSystem = .init(initialState: TState.initial(),
                                    reducer: Self.reduce,
                                    feedbacks: feedbacks() + [bindUIClosure()])
+        feedbackLoopSystemInput.system = feedbackLoopSystem
+        feedbackLoopSystemInput.flush()
     }
     
     func bindUI(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) { }
