@@ -9,7 +9,7 @@ import Foundation
 
 // MARK: - FeedbackLoopSystem
 class FeedbackLoopSystem<TState: Equatable, TEvent> {
-    typealias Feedback = (_ newState: TState, _ oldState: TState, _ completion: @escaping (TEvent) -> Void) -> Void
+    typealias Feedback = (_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) -> Void
     
     private var queue = DispatchQueue(label: "FeedbackLoopSystem_queue")
     
