@@ -42,11 +42,11 @@ class ListItemCell: UITableViewCell {
         NSLayoutConstraint.activate([
             lbTitle.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
             lbTitle.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            lbTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16),
+            lbTitle.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             
             lbText.topAnchor.constraint(equalTo: lbTitle.bottomAnchor, constant: 4),
             lbText.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16),
-            lbText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: 16),
+            lbText.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
             lbText.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8)
         ])
     }
