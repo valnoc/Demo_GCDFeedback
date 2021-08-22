@@ -27,12 +27,13 @@ extension ListVC {
         case configure
         case didLoadItems(_ value: [FeedItem], _ request: State.Request)
         case didSelectItem(_ item: FeedItem)
-        case didRouteToItem(_ request: State.Request)
+        case didFinishRequest(_ request: State.Request)
     }
 }
 
 extension ListVC {
     static func reduce(state: State, event: Event) -> State {
+        print(event)
         var state = state
         switch event {
         case .configure:
@@ -41,8 +42,8 @@ extension ListVC {
             state.requests.remove(request)
             state.items = value
         case let .didSelectItem(item):
-            state.requests.insert(.routeToItem(item.id))
-        case let .didRouteToItem(request):
+            state.requests.insert(.output(.didSelectItem(item.id)))
+        case let .didFinishRequest(request):
             state.requests.remove(request)
         }
         return state
@@ -52,11 +53,11 @@ extension ListVC {
 extension ListVC.State {
     enum Request: Hashable {
         case loadList
-        case routeToItem(_ itemId: String)
+        case output(_ value: Output)
         
-        func isRouteToItem() -> Bool {
+        func isOutput() -> Bool {
             switch self {
-            case .routeToItem:
+            case .output:
                 return true
             default:
                 return false
@@ -67,10 +68,23 @@ extension ListVC.State {
             switch (lhs, rhs) {
             case (.loadList, .loadList):
                 return true
-            case let (.routeToItem(itemIdLhs), .routeToItem(itemIdRhs)):
-                return itemIdLhs == itemIdRhs
+            case let (.output(valueLhs), .output(valueRhs)):
+                return valueLhs == valueRhs
             default:
                 return false
+            }
+        }
+    }
+}
+
+extension ListVC.State.Request {
+    enum Output: Hashable {
+        case didSelectItem(_ itemId: String)
+        
+        static func ==(_ lhs: ListVC.State.Request.Output, _ rhs: ListVC.State.Request.Output) -> Bool {
+            switch (lhs, rhs) {
+            case let (.didSelectItem(itemIdLhs), .didSelectItem(itemIdRhs)):
+                return itemIdLhs == itemIdRhs
             }
         }
     }

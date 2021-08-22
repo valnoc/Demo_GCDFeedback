@@ -9,7 +9,7 @@ import Foundation
 
 extension ListVC {
     func feedbacks() -> [FeedbackLoopSystem<State, Event>.Feedback] {
-        [loadItems, routeToItem]
+        [loadItems, output]
     }
     
     func loadItems(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
@@ -20,11 +20,14 @@ extension ListVC {
         }
     }
     
-    func routeToItem(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
-        guard oldState.requests.first(where: { $0.isRouteToItem() }) == nil,
-              case let .routeToItem(item) = newState.requests.first(where: { $0.isRouteToItem() }) else { return }
-        DispatchQueue.main.async {
-            action(.didRouteToItem(.routeToItem(item)))
+    func output(_ newState: State, _ oldState: State, _ action: @escaping (Event) -> Void) {
+        guard oldState.requests.first(where: { $0.isOutput() }) == nil,
+              case let .output(value) = newState.requests.first(where: { $0.isOutput() }) else { return }
+        
+        switch value {
+        case let .didSelectItem(itemId):
+            output?.listScreen(self, didSelectItem: itemId)
+            action(.didFinishRequest(.output(value)))
         }
     }
 }

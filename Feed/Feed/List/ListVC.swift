@@ -12,6 +12,7 @@ class ListVC: UIViewController, FeedbackLoopable {
     typealias TEvent = Event
     var feedbackLoopSystem: FeedbackLoopSystem<State, Event>?
     
+    weak var output: ListScreenOutput?
     let interactor: ListInteractor
     
     init(interactor: ListInteractor) {
@@ -37,9 +38,11 @@ class ListVC: UIViewController, FeedbackLoopable {
         view.backgroundColor = .white
         
         driveFeedbackLoopSystem()
-        feedbackLoopSystem?.acceptEvent(.configure)
     }
-
-
 }
 
+extension ListVC: ListScreenInput {
+    func configure() {
+        feedbackLoopSystem?.acceptEvent(.configure)
+    }
+}
