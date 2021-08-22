@@ -11,12 +11,14 @@ extension ListVC {
     struct State: FeedbackLoopableState {
         var title: String
         var items: [FeedItem]
+        var authorized: Bool
         
         var requests: Set<Request>
         
         static func initial() -> Self {
             .init(title: "Список постов",
                   items: [],
+                  authorized: false,
                   requests: [])
         }
     }
@@ -29,6 +31,7 @@ extension ListVC {
         case didLoadItems(_ value: [FeedItem], _ request: State.Request)
         case didSelectItem(_ item: FeedItem)
         case didPressToggleLike(_ item: FeedItem)
+        case didChangeAuthorizedStatus(_ authorized: Bool)
     }
 }
 
@@ -40,6 +43,7 @@ extension ListVC {
         switch event {
         case .configure:
             state.requests.insert(.loadList)
+            state.requests.insert(.subscribeToAuthorized)
             
         case let .didLoadItems(value, request):
             state.requests.remove(request)
@@ -57,6 +61,9 @@ extension ListVC {
                 item.liked.toggle()
                 state.items[index] = item
             }
+            
+        case let .didChangeAuthorizedStatus(authorized):
+            state.authorized = authorized
         }
         
         return state
@@ -67,6 +74,7 @@ extension ListVC.State {
     enum Request: Hashable {
         case loadList
         case output(_ value: Output)
+        case subscribeToAuthorized
         
         func isOutput() -> Bool {
             switch self {
@@ -83,6 +91,8 @@ extension ListVC.State {
                 return true
             case let (.output(valueLhs), .output(valueRhs)):
                 return valueLhs == valueRhs
+            case (.subscribeToAuthorized, .subscribeToAuthorized):
+                return true
             default:
                 return false
             }

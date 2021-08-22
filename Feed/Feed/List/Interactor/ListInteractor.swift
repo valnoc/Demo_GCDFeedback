@@ -9,4 +9,5 @@ import Foundation
 
 protocol ListInteractor {
     func loadItems(_ completion: @escaping ([FeedItem]) -> Void)
+    func subscribeToAuthorizedChange(_ action: @escaping (Bool) -> Void)
 }

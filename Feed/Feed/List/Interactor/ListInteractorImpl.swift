@@ -18,4 +18,19 @@ extension ListInteractorImpl: ListInteractor {
             completion(__self.repo.items())
         }
     }
+    
+    func subscribeToAuthorizedChange(_ action: @escaping (Bool) -> Void) {
+        action(false)
+        DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+            action(true)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10, execute: {
+                action(false)
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 5, execute: {
+                    action(true)
+                })
+            })
+        })
+    }
 }

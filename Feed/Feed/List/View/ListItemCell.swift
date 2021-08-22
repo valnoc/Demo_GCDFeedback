@@ -11,6 +11,7 @@ struct ListItemCellVM {
     let title: String
     let text: String
     let isLiked: Bool
+    let showLikeButton: Bool
     
     let likeAction: () -> Void
     
@@ -78,6 +79,8 @@ extension ListItemCell {
     func update(_ vm: ListItemCellVM) {
         lbTitle.text = vm.title
         lbText.text = vm.text
+        
+        bnLike.isHidden = !vm.showLikeButton
         bnLike.isSelected = vm.isLiked
         updateBnLikedImage()
         

@@ -12,12 +12,14 @@ extension ListVC {
         DispatchQueue.main.sync {
             navigationItem.title = newState.title
             
-            if newState.items != oldState.items {
+            if newState.items != oldState.items ||
+                newState.authorized != oldState.authorized {
                 viewList?.updateList(newState.items
                                         .map({ item in
                                                 .init(title: item.title,
                                                       text: item.text,
                                                       isLiked: item.liked,
+                                                      showLikeButton: newState.authorized,
                                                       likeAction: { action(.didPressToggleLike(item)) },
                                                       userInfo: item) }),
                                      action: action)
