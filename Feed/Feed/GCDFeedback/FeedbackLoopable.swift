@@ -29,7 +29,6 @@ extension FeedbackLoopable {
                                    reducer: Self.reduce,
                                    feedbacks: feedbacks() + [bindUIClosure()])
         feedbackLoopSystemInput.system = feedbackLoopSystem
-        feedbackLoopSystemInput.flush()
     }
     
     func bindUI(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) { }

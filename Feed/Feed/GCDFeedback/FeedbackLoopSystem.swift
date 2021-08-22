@@ -44,7 +44,11 @@ class FeedbackLoopSystem<TState: Equatable, TEvent> {
 
 // MARK: - FeedbackLoopSystemInput
 class FeedbackLoopSystemInput<TState: Equatable, TEvent> {
-    weak var system: FeedbackLoopSystem<TState, TEvent>?
+    weak var system: FeedbackLoopSystem<TState, TEvent>? {
+        didSet {
+            flush()
+        }
+    }
     
     private var fifo: [TEvent] = []
     
@@ -57,7 +61,7 @@ class FeedbackLoopSystemInput<TState: Equatable, TEvent> {
         system.acceptEvent(event)
     }
     
-    func flush() {
+    private func flush() {
         guard let system = system else { return }
         fifo.forEach(system.acceptEvent(_:))
         fifo.removeAll()
