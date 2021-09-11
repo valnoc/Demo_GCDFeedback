@@ -1,0 +1,20 @@
+[
+    {
+        "id": "1",
+        "title": "Lorem ipsum dolor sit amet",
+        "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Porta non pulvinar neque laoreet. Sit amet porttitor eget dolor morbi non arcu risus.",
+        "liked": false
+    },
+    {
+        "id": "2",
+        "title": "Game of Hodor",
+        "text": "Hodor hodor hodor hodor hodor hodor hodor.",
+        "liked": false
+    },
+    {
+        "id": "3",
+        "title": "Lorem ipsum dolor sit amet",
+        "text": "Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds, to seek out new life and new civilizations, to boldly go where no man has gone before.",
+        "liked": false
+    }
+]
