@@ -16,6 +16,8 @@ class ListView: UIView {
     override init(frame: CGRect) {
         super.init(frame: frame)
     
+        backgroundColor = .white
+        
         tableView.dataSource = self
         tableView.delegate = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
