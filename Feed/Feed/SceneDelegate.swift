@@ -19,7 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let wscene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: wscene)
-        let listVC = ListVC(interactor: ListInteractorImpl())
+        let listVC = ListVC(loadFeedItemsUseCase: LoadFeedItemsUseCaseImpl(repo: FeedItemsRepoImpl()),
+                            subscribeToAuthStatusUseCase: SubscribeToAuthStatusUseCaseImpl())
         listVC.configure()
         window?.rootViewController = UINavigationController(rootViewController: listVC)
         window?.makeKeyAndVisible()

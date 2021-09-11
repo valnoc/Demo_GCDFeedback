@@ -14,10 +14,14 @@ class ListVC: UIViewController, FeedbackLoopable {
     var feedbackLoopSystemInput: FeedbackLoopSystemInput<TState, TEvent> = .init()
     
     weak var output: ListScreenOutput?
-    let interactor: ListInteractor
     
-    init(interactor: ListInteractor) {
-        self.interactor = interactor
+    let loadFeedItemsUseCase: LoadFeedItemsUseCase
+    let subscribeToAuthStatusUseCase: SubscribeToAuthStatusUseCase
+    
+    init(loadFeedItemsUseCase: LoadFeedItemsUseCase,
+         subscribeToAuthStatusUseCase: SubscribeToAuthStatusUseCase) {
+        self.loadFeedItemsUseCase = loadFeedItemsUseCase
+        self.subscribeToAuthStatusUseCase = subscribeToAuthStatusUseCase
         super.init(nibName: nil, bundle: nil)
     }
     

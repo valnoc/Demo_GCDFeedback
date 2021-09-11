@@ -15,7 +15,7 @@ extension ListVC {
     func loadItems(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
         guard !oldState.requests.contains(.loadList),
               newState.requests.contains(.loadList) else { return }
-        interactor.loadItems { items in
+        loadFeedItemsUseCase.execute { items in
             action(.didLoadItems(items, .loadList))
         }
     }
@@ -34,7 +34,7 @@ extension ListVC {
     func subscribeToAuthorized(_ newState: TState, _ oldState: TState, _ action: @escaping (TEvent) -> Void) {
         guard !oldState.requests.contains(.subscribeToAuthorized),
               newState.requests.contains(.subscribeToAuthorized) else { return }
-        interactor.subscribeToAuthorizedChange { status in
+        subscribeToAuthStatusUseCase.execute { status in
             action(.didChangeAuthorizedStatus(status))
         }
         action(.didFinishRequest(.subscribeToAuthorized))
