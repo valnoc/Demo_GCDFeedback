@@ -16,7 +16,6 @@ protocol FeedbackLoopable: AnyObject {
     associatedtype TEvent
     
     var feedbackLoopSystem: FeedbackLoopSystem<TState, TEvent>? { get set }
-    var feedbackLoopSystemInput: FeedbackLoopSystemInput<TState, TEvent> { get set }
     
     static func reduce(state: TState, event: TEvent) -> TState
     func feedbacks() -> [FeedbackLoopSystem<TState, TEvent>.Feedback]
@@ -27,6 +26,5 @@ extension FeedbackLoopable {
         feedbackLoopSystem = .init(initialState: TState.initial(),
                                    reducer: Self.reduce,
                                    feedbacks: feedbacks())
-        feedbackLoopSystemInput.system = feedbackLoopSystem
     }
 }

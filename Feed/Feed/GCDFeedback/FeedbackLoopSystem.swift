@@ -25,7 +25,7 @@ class FeedbackLoopSystem<TState: Equatable, TEvent> {
         self.feedbacks = feedbacks
     }
 
-    fileprivate func acceptEvent(_ event: TEvent) {
+    func acceptEvent(_ event: TEvent) {
         queue.async { [weak self] in
             guard let __self = self else { return }
             
@@ -39,31 +39,5 @@ class FeedbackLoopSystem<TState: Equatable, TEvent> {
                 self?.acceptEvent(event)
             }) }
         }
-    }
-}
-
-// MARK: - FeedbackLoopSystemInput
-class FeedbackLoopSystemInput<TState: Equatable, TEvent> {
-    weak var system: FeedbackLoopSystem<TState, TEvent>? {
-        didSet {
-            flush()
-        }
-    }
-    
-    private var fifo: [TEvent] = []
-    
-    func acceptEvent(_ event: TEvent) {
-        guard let system = system else {
-            fifo.append(event)
-            return
-        }
-        
-        system.acceptEvent(event)
-    }
-    
-    private func flush() {
-        guard let system = system else { return }
-        fifo.forEach(system.acceptEvent(_:))
-        fifo.removeAll()
     }
 }

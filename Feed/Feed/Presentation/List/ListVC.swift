@@ -11,7 +11,6 @@ class ListVC: UIViewController, FeedbackLoopable {
     typealias TState = State
     typealias TEvent = Event
     var feedbackLoopSystem: FeedbackLoopSystem<TState, TEvent>?
-    var feedbackLoopSystemInput: FeedbackLoopSystemInput<TState, TEvent> = .init()
     
     weak var output: ListScreenOutput?
     
@@ -23,6 +22,8 @@ class ListVC: UIViewController, FeedbackLoopable {
         self.loadFeedItemsUseCase = loadFeedItemsUseCase
         self.subscribeToAuthStatusUseCase = subscribeToAuthStatusUseCase
         super.init(nibName: nil, bundle: nil)
+        
+        driveFeedbackLoopSystem()
     }
     
     required init?(coder: NSCoder) {
@@ -39,13 +40,11 @@ class ListVC: UIViewController, FeedbackLoopable {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        driveFeedbackLoopSystem()
     }
 }
 
 extension ListVC: ListScreenInput {
     func configure() {
-        feedbackLoopSystemInput.acceptEvent(.configure)
+        feedbackLoopSystem?.acceptEvent(.configure)
     }
 }
