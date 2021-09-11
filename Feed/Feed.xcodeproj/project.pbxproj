@@ -18,7 +18,7 @@
 		5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81D26ECE90B004C340C /* ListItemCell.swift */; };
 		5B8EB82C26ECE90B004C340C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81F26ECE90B004C340C /* ListInteractor.swift */; };
 		5B8EB82D26ECE90B004C340C /* ListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82026ECE90B004C340C /* ListInteractorImpl.swift */; };
-		5B8EB82E26ECE90B004C340C /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82126ECE90B004C340C /* ListScreen.swift */; };
+		5B8EB82E26ECE90B004C340C /* ListScreenIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82126ECE90B004C340C /* ListScreenIO.swift */; };
 		5B8EB82F26ECE90B004C340C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82226ECE90B004C340C /* ListVC.swift */; };
 		5B8EB83026ECE90B004C340C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82426ECE90B004C340C /* FeedItem.swift */; };
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
@@ -39,7 +39,7 @@
 		5B8EB81D26ECE90B004C340C /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		5B8EB81F26ECE90B004C340C /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
 		5B8EB82026ECE90B004C340C /* ListInteractorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractorImpl.swift; sourceTree = "<group>"; };
-		5B8EB82126ECE90B004C340C /* ListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		5B8EB82126ECE90B004C340C /* ListScreenIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListScreenIO.swift; sourceTree = "<group>"; };
 		5B8EB82226ECE90B004C340C /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
 		5B8EB82426ECE90B004C340C /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		5BE8C98E26B6B99D0090DF9D /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,7 +93,7 @@
 				5B8EB81726ECE90B004C340C /* FeedbackLoop */,
 				5B8EB81B26ECE90B004C340C /* View */,
 				5B8EB81E26ECE90B004C340C /* Interactor */,
-				5B8EB82126ECE90B004C340C /* ListScreen.swift */,
+				5B8EB82126ECE90B004C340C /* ListScreenIO.swift */,
 				5B8EB82226ECE90B004C340C /* ListVC.swift */,
 			);
 			path = List;
@@ -251,7 +251,7 @@
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
 				5B8EB82526ECE90B004C340C /* FeedItemsRepo.swift in Sources */,
 				5B8EB82C26ECE90B004C340C /* ListInteractor.swift in Sources */,
-				5B8EB82E26ECE90B004C340C /* ListScreen.swift in Sources */,
+				5B8EB82E26ECE90B004C340C /* ListScreenIO.swift in Sources */,
 				5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */,
 				5B8EB82A26ECE90B004C340C /* ListView.swift in Sources */,
 			);
