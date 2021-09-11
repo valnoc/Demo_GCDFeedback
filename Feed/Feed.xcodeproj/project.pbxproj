@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE126BEC5CF0009F4D2 /* FeedbackLoopable.swift */; };
 		5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE226BEC5CF0009F4D2 /* FeedbackLoopSystem.swift */; };
-		5B66FDEB26BEC5CF0009F4D2 /* ListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE526BEC5CF0009F4D2 /* ListVC+State.swift */; };
-		5B66FDEC26BEC5CF0009F4D2 /* ListVC+BindUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE626BEC5CF0009F4D2 /* ListVC+BindUI.swift */; };
-		5B66FDED26BEC5CF0009F4D2 /* ListVC+Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */; };
-		5B66FDEE26BEC5CF0009F4D2 /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */; };
-		5B66FDF326BECD0B0009F4D2 /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */; };
-		5B66FDF526BED1390009F4D2 /* ListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */; };
-		5B6D760026C051B8005F5816 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B6D75FF26C051B8005F5816 /* ListView.swift */; };
-		5B70A9FB26D2394900E56A9B /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B70A9FA26D2394900E56A9B /* ListScreen.swift */; };
-		5B77705426CAE53600908EC1 /* feedItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B77705326CAE53600908EC1 /* feedItems.json */; };
-		5B77705626CAE9DF00908EC1 /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77705526CAE9DF00908EC1 /* FeedItem.swift */; };
-		5B77705826CAEA6B00908EC1 /* FeedItemsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77705726CAEA6B00908EC1 /* FeedItemsRepo.swift */; };
-		5B77705A26CAF11300908EC1 /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B77705926CAF11300908EC1 /* ListItemCell.swift */; };
+		5B8EB82526ECE90B004C340C /* FeedItemsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81326ECE90B004C340C /* FeedItemsRepo.swift */; };
+		5B8EB82626ECE90B004C340C /* feedItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB81426ECE90B004C340C /* feedItems.json */; };
+		5B8EB82726ECE90B004C340C /* ListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81826ECE90B004C340C /* ListVC+State.swift */; };
+		5B8EB82826ECE90B004C340C /* ListVC+BindUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81926ECE90B004C340C /* ListVC+BindUI.swift */; };
+		5B8EB82926ECE90B004C340C /* ListVC+Feedbacks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81A26ECE90B004C340C /* ListVC+Feedbacks.swift */; };
+		5B8EB82A26ECE90B004C340C /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81C26ECE90B004C340C /* ListView.swift */; };
+		5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81D26ECE90B004C340C /* ListItemCell.swift */; };
+		5B8EB82C26ECE90B004C340C /* ListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81F26ECE90B004C340C /* ListInteractor.swift */; };
+		5B8EB82D26ECE90B004C340C /* ListInteractorImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82026ECE90B004C340C /* ListInteractorImpl.swift */; };
+		5B8EB82E26ECE90B004C340C /* ListScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82126ECE90B004C340C /* ListScreen.swift */; };
+		5B8EB82F26ECE90B004C340C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82226ECE90B004C340C /* ListVC.swift */; };
+		5B8EB83026ECE90B004C340C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82426ECE90B004C340C /* FeedItem.swift */; };
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
 		5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
@@ -30,18 +30,18 @@
 /* Begin PBXFileReference section */
 		5B66FDE126BEC5CF0009F4D2 /* FeedbackLoopable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackLoopable.swift; sourceTree = "<group>"; };
 		5B66FDE226BEC5CF0009F4D2 /* FeedbackLoopSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackLoopSystem.swift; sourceTree = "<group>"; };
-		5B66FDE526BEC5CF0009F4D2 /* ListVC+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+State.swift"; sourceTree = "<group>"; };
-		5B66FDE626BEC5CF0009F4D2 /* ListVC+BindUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+BindUI.swift"; sourceTree = "<group>"; };
-		5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+Feedbacks.swift"; sourceTree = "<group>"; };
-		5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
-		5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
-		5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInteractorImpl.swift; sourceTree = "<group>"; };
-		5B6D75FF26C051B8005F5816 /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
-		5B70A9FA26D2394900E56A9B /* ListScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
-		5B77705326CAE53600908EC1 /* feedItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedItems.json; sourceTree = "<group>"; };
-		5B77705526CAE9DF00908EC1 /* FeedItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
-		5B77705726CAEA6B00908EC1 /* FeedItemsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsRepo.swift; sourceTree = "<group>"; };
-		5B77705926CAF11300908EC1 /* ListItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		5B8EB81326ECE90B004C340C /* FeedItemsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemsRepo.swift; sourceTree = "<group>"; };
+		5B8EB81426ECE90B004C340C /* feedItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedItems.json; sourceTree = "<group>"; };
+		5B8EB81826ECE90B004C340C /* ListVC+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+State.swift"; sourceTree = "<group>"; };
+		5B8EB81926ECE90B004C340C /* ListVC+BindUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+BindUI.swift"; sourceTree = "<group>"; };
+		5B8EB81A26ECE90B004C340C /* ListVC+Feedbacks.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+Feedbacks.swift"; sourceTree = "<group>"; };
+		5B8EB81C26ECE90B004C340C /* ListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		5B8EB81D26ECE90B004C340C /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
+		5B8EB81F26ECE90B004C340C /* ListInteractor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractor.swift; sourceTree = "<group>"; };
+		5B8EB82026ECE90B004C340C /* ListInteractorImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListInteractorImpl.swift; sourceTree = "<group>"; };
+		5B8EB82126ECE90B004C340C /* ListScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListScreen.swift; sourceTree = "<group>"; };
+		5B8EB82226ECE90B004C340C /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
+		5B8EB82426ECE90B004C340C /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		5BE8C98E26B6B99D0090DF9D /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -70,54 +70,69 @@
 			path = GCDFeedback;
 			sourceTree = "<group>";
 		};
-		5B66FDE326BEC5CF0009F4D2 /* List */ = {
+		5B8EB81226ECE90B004C340C /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				5B66FDE426BEC5CF0009F4D2 /* FeedbackLoop */,
-				5B66FDE826BEC5CF0009F4D2 /* ListVC.swift */,
-				5B70A9FA26D2394900E56A9B /* ListScreen.swift */,
-				5B6D75FE26C051B8005F5816 /* View */,
-				5B66FDF126BECD0B0009F4D2 /* Interactor */,
+				5B8EB81326ECE90B004C340C /* FeedItemsRepo.swift */,
+				5B8EB81426ECE90B004C340C /* feedItems.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		5B8EB81526ECE90B004C340C /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB81626ECE90B004C340C /* List */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		5B8EB81626ECE90B004C340C /* List */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB81726ECE90B004C340C /* FeedbackLoop */,
+				5B8EB81B26ECE90B004C340C /* View */,
+				5B8EB81E26ECE90B004C340C /* Interactor */,
+				5B8EB82126ECE90B004C340C /* ListScreen.swift */,
+				5B8EB82226ECE90B004C340C /* ListVC.swift */,
 			);
 			path = List;
 			sourceTree = "<group>";
 		};
-		5B66FDE426BEC5CF0009F4D2 /* FeedbackLoop */ = {
+		5B8EB81726ECE90B004C340C /* FeedbackLoop */ = {
 			isa = PBXGroup;
 			children = (
-				5B66FDE526BEC5CF0009F4D2 /* ListVC+State.swift */,
-				5B66FDE626BEC5CF0009F4D2 /* ListVC+BindUI.swift */,
-				5B66FDE726BEC5CF0009F4D2 /* ListVC+Feedbacks.swift */,
+				5B8EB81826ECE90B004C340C /* ListVC+State.swift */,
+				5B8EB81926ECE90B004C340C /* ListVC+BindUI.swift */,
+				5B8EB81A26ECE90B004C340C /* ListVC+Feedbacks.swift */,
 			);
 			path = FeedbackLoop;
 			sourceTree = "<group>";
 		};
-		5B66FDF126BECD0B0009F4D2 /* Interactor */ = {
+		5B8EB81B26ECE90B004C340C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				5B66FDF226BECD0B0009F4D2 /* ListInteractor.swift */,
-				5B66FDF426BED1390009F4D2 /* ListInteractorImpl.swift */,
-			);
-			path = Interactor;
-			sourceTree = "<group>";
-		};
-		5B6D75FE26C051B8005F5816 /* View */ = {
-			isa = PBXGroup;
-			children = (
-				5B6D75FF26C051B8005F5816 /* ListView.swift */,
-				5B77705926CAF11300908EC1 /* ListItemCell.swift */,
+				5B8EB81C26ECE90B004C340C /* ListView.swift */,
+				5B8EB81D26ECE90B004C340C /* ListItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		5B77705226CAE53600908EC1 /* Data */ = {
+		5B8EB81E26ECE90B004C340C /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				5B77705326CAE53600908EC1 /* feedItems.json */,
-				5B77705526CAE9DF00908EC1 /* FeedItem.swift */,
-				5B77705726CAEA6B00908EC1 /* FeedItemsRepo.swift */,
+				5B8EB81F26ECE90B004C340C /* ListInteractor.swift */,
+				5B8EB82026ECE90B004C340C /* ListInteractorImpl.swift */,
 			);
-			path = Data;
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		5B8EB82326ECE90B004C340C /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB82426ECE90B004C340C /* FeedItem.swift */,
+			);
+			path = Domain;
 			sourceTree = "<group>";
 		};
 		5BE8C98526B6B99D0090DF9D = {
@@ -141,9 +156,10 @@
 			children = (
 				5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */,
 				5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */,
-				5B77705226CAE53600908EC1 /* Data */,
 				5B66FDE026BEC5CF0009F4D2 /* GCDFeedback */,
-				5B66FDE326BEC5CF0009F4D2 /* List */,
+				5B8EB81226ECE90B004C340C /* Data */,
+				5B8EB82326ECE90B004C340C /* Domain */,
+				5B8EB81526ECE90B004C340C /* Presentation */,
 				5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */,
 				5BE8C99C26B6B99F0090DF9D /* LaunchScreen.storyboard */,
 				5BE8C99F26B6B99F0090DF9D /* Info.plist */,
@@ -210,9 +226,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B77705426CAE53600908EC1 /* feedItems.json in Resources */,
 				5BE8C99E26B6B99F0090DF9D /* LaunchScreen.storyboard in Resources */,
 				5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */,
+				5B8EB82626ECE90B004C340C /* feedItems.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -223,21 +239,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B66FDF326BECD0B0009F4D2 /* ListInteractor.swift in Sources */,
+				5B8EB82F26ECE90B004C340C /* ListVC.swift in Sources */,
+				5B8EB82D26ECE90B004C340C /* ListInteractorImpl.swift in Sources */,
+				5B8EB82826ECE90B004C340C /* ListVC+BindUI.swift in Sources */,
+				5B8EB82926ECE90B004C340C /* ListVC+Feedbacks.swift in Sources */,
+				5B8EB82726ECE90B004C340C /* ListVC+State.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
-				5B66FDEC26BEC5CF0009F4D2 /* ListVC+BindUI.swift in Sources */,
-				5B66FDEB26BEC5CF0009F4D2 /* ListVC+State.swift in Sources */,
-				5B66FDF526BED1390009F4D2 /* ListInteractorImpl.swift in Sources */,
+				5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */,
 				5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */,
-				5B66FDEE26BEC5CF0009F4D2 /* ListVC.swift in Sources */,
+				5B8EB83026ECE90B004C340C /* FeedItem.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
-				5B77705A26CAF11300908EC1 /* ListItemCell.swift in Sources */,
-				5B77705626CAE9DF00908EC1 /* FeedItem.swift in Sources */,
-				5B6D760026C051B8005F5816 /* ListView.swift in Sources */,
+				5B8EB82526ECE90B004C340C /* FeedItemsRepo.swift in Sources */,
+				5B8EB82C26ECE90B004C340C /* ListInteractor.swift in Sources */,
+				5B8EB82E26ECE90B004C340C /* ListScreen.swift in Sources */,
 				5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */,
-				5B66FDED26BEC5CF0009F4D2 /* ListVC+Feedbacks.swift in Sources */,
-				5B77705826CAEA6B00908EC1 /* FeedItemsRepo.swift in Sources */,
-				5B70A9FB26D2394900E56A9B /* ListScreen.swift in Sources */,
+				5B8EB82A26ECE90B004C340C /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
