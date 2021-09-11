@@ -18,10 +18,10 @@
 		5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81D26ECE90B004C340C /* ListItemCell.swift */; };
 		5B8EB82E26ECE90B004C340C /* ListScreenIO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82126ECE90B004C340C /* ListScreenIO.swift */; };
 		5B8EB82F26ECE90B004C340C /* ListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82226ECE90B004C340C /* ListVC.swift */; };
-		5B8EB83026ECE90B004C340C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB82426ECE90B004C340C /* FeedItem.swift */; };
-		5B8EB83226ECE96D004C340C /* LoadFeedItemsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83126ECE96D004C340C /* LoadFeedItemsUseCase.swift */; };
-		5B8EB83426ECE990004C340C /* SubscribeToAuthStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83326ECE990004C340C /* SubscribeToAuthStatusUseCase.swift */; };
-		5B8EB83626ECEA05004C340C /* FeedItemsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83526ECEA05004C340C /* FeedItemsRepo.swift */; };
+		5B8EB83D26ECEC3D004C340C /* SubscribeToAuthStatusUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83826ECEC3D004C340C /* SubscribeToAuthStatusUseCase.swift */; };
+		5B8EB83E26ECEC3D004C340C /* LoadFeedItemsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83A26ECEC3D004C340C /* LoadFeedItemsUseCase.swift */; };
+		5B8EB83F26ECEC3D004C340C /* FeedItemsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83B26ECEC3D004C340C /* FeedItemsRepo.swift */; };
+		5B8EB84026ECEC3D004C340C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83C26ECEC3D004C340C /* FeedItem.swift */; };
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
 		5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
@@ -40,10 +40,10 @@
 		5B8EB81D26ECE90B004C340C /* ListItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItemCell.swift; sourceTree = "<group>"; };
 		5B8EB82126ECE90B004C340C /* ListScreenIO.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListScreenIO.swift; sourceTree = "<group>"; };
 		5B8EB82226ECE90B004C340C /* ListVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListVC.swift; sourceTree = "<group>"; };
-		5B8EB82426ECE90B004C340C /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
-		5B8EB83126ECE96D004C340C /* LoadFeedItemsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadFeedItemsUseCase.swift; sourceTree = "<group>"; };
-		5B8EB83326ECE990004C340C /* SubscribeToAuthStatusUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubscribeToAuthStatusUseCase.swift; sourceTree = "<group>"; };
-		5B8EB83526ECEA05004C340C /* FeedItemsRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedItemsRepo.swift; sourceTree = "<group>"; };
+		5B8EB83826ECEC3D004C340C /* SubscribeToAuthStatusUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubscribeToAuthStatusUseCase.swift; sourceTree = "<group>"; };
+		5B8EB83A26ECEC3D004C340C /* LoadFeedItemsUseCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadFeedItemsUseCase.swift; sourceTree = "<group>"; };
+		5B8EB83B26ECEC3D004C340C /* FeedItemsRepo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemsRepo.swift; sourceTree = "<group>"; };
+		5B8EB83C26ECEC3D004C340C /* FeedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItem.swift; sourceTree = "<group>"; };
 		5BE8C98E26B6B99D0090DF9D /* Feed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Feed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -122,12 +122,28 @@
 		5B8EB82326ECE90B004C340C /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				5B8EB82426ECE90B004C340C /* FeedItem.swift */,
-				5B8EB83126ECE96D004C340C /* LoadFeedItemsUseCase.swift */,
-				5B8EB83526ECEA05004C340C /* FeedItemsRepo.swift */,
-				5B8EB83326ECE990004C340C /* SubscribeToAuthStatusUseCase.swift */,
+				5B8EB83726ECEC3D004C340C /* Auth */,
+				5B8EB83926ECEC3D004C340C /* FeedItem */,
 			);
 			path = Domain;
+			sourceTree = "<group>";
+		};
+		5B8EB83726ECEC3D004C340C /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB83826ECEC3D004C340C /* SubscribeToAuthStatusUseCase.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		5B8EB83926ECEC3D004C340C /* FeedItem */ = {
+			isa = PBXGroup;
+			children = (
+				5B8EB83A26ECEC3D004C340C /* LoadFeedItemsUseCase.swift */,
+				5B8EB83B26ECEC3D004C340C /* FeedItemsRepo.swift */,
+				5B8EB83C26ECEC3D004C340C /* FeedItem.swift */,
+			);
+			path = FeedItem;
 			sourceTree = "<group>";
 		};
 		5BE8C98526B6B99D0090DF9D = {
@@ -234,19 +250,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5B8EB83426ECE990004C340C /* SubscribeToAuthStatusUseCase.swift in Sources */,
 				5B8EB82F26ECE90B004C340C /* ListVC.swift in Sources */,
 				5B8EB82826ECE90B004C340C /* ListVC+BindUI.swift in Sources */,
+				5B8EB83D26ECEC3D004C340C /* SubscribeToAuthStatusUseCase.swift in Sources */,
+				5B8EB83F26ECEC3D004C340C /* FeedItemsRepo.swift in Sources */,
 				5B8EB82926ECE90B004C340C /* ListVC+Feedbacks.swift in Sources */,
-				5B8EB83226ECE96D004C340C /* LoadFeedItemsUseCase.swift in Sources */,
-				5B8EB83626ECEA05004C340C /* FeedItemsRepo.swift in Sources */,
 				5B8EB82726ECE90B004C340C /* ListVC+State.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
 				5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */,
 				5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */,
-				5B8EB83026ECE90B004C340C /* FeedItem.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
 				5B8EB82526ECE90B004C340C /* FeedItemsRepoImpl.swift in Sources */,
+				5B8EB83E26ECEC3D004C340C /* LoadFeedItemsUseCase.swift in Sources */,
+				5B8EB84026ECEC3D004C340C /* FeedItem.swift in Sources */,
 				5B8EB82E26ECE90B004C340C /* ListScreenIO.swift in Sources */,
 				5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */,
 				5B8EB82A26ECE90B004C340C /* ListView.swift in Sources */,
