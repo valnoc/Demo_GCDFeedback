@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "GCDFeedback",
+        "repositoryURL": "https://github.com/valnoc/GCDFeedback",
+        "state": {
+          "branch": null,
+          "revision": "1b72975ea89964946439add5adb9d2926f5f2549",
+          "version": "1.0.1"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
