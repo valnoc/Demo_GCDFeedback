@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import GCDFeedback
 
 extension ListVC {
     struct State: FeedbackLoopableState {

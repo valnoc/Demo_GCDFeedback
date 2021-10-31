@@ -3,12 +3,10 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE126BEC5CF0009F4D2 /* FeedbackLoopable.swift */; };
-		5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B66FDE226BEC5CF0009F4D2 /* FeedbackLoopSystem.swift */; };
 		5B8EB82526ECE90B004C340C /* FeedItemsRepoImpl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81326ECE90B004C340C /* FeedItemsRepoImpl.swift */; };
 		5B8EB82626ECE90B004C340C /* feedItems.json in Resources */ = {isa = PBXBuildFile; fileRef = 5B8EB81426ECE90B004C340C /* feedItems.json */; };
 		5B8EB82726ECE90B004C340C /* ListVC+State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB81826ECE90B004C340C /* ListVC+State.swift */; };
@@ -22,6 +20,7 @@
 		5B8EB83E26ECEC3D004C340C /* LoadFeedItemsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83A26ECEC3D004C340C /* LoadFeedItemsUseCase.swift */; };
 		5B8EB83F26ECEC3D004C340C /* FeedItemsRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83B26ECEC3D004C340C /* FeedItemsRepo.swift */; };
 		5B8EB84026ECEC3D004C340C /* FeedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B8EB83C26ECEC3D004C340C /* FeedItem.swift */; };
+		5BBCB679272ECB5B00FD58F2 /* GCDFeedback in Frameworks */ = {isa = PBXBuildFile; productRef = 5BBCB678272ECB5B00FD58F2 /* GCDFeedback */; };
 		5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */; };
 		5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */; };
 		5BE8C99B26B6B99F0090DF9D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5BE8C99A26B6B99F0090DF9D /* Assets.xcassets */; };
@@ -29,8 +28,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B66FDE126BEC5CF0009F4D2 /* FeedbackLoopable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackLoopable.swift; sourceTree = "<group>"; };
-		5B66FDE226BEC5CF0009F4D2 /* FeedbackLoopSystem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedbackLoopSystem.swift; sourceTree = "<group>"; };
 		5B8EB81326ECE90B004C340C /* FeedItemsRepoImpl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FeedItemsRepoImpl.swift; sourceTree = "<group>"; };
 		5B8EB81426ECE90B004C340C /* feedItems.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = feedItems.json; sourceTree = "<group>"; };
 		5B8EB81826ECE90B004C340C /* ListVC+State.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "ListVC+State.swift"; sourceTree = "<group>"; };
@@ -57,21 +54,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5BBCB679272ECB5B00FD58F2 /* GCDFeedback in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5B66FDE026BEC5CF0009F4D2 /* GCDFeedback */ = {
-			isa = PBXGroup;
-			children = (
-				5B66FDE126BEC5CF0009F4D2 /* FeedbackLoopable.swift */,
-				5B66FDE226BEC5CF0009F4D2 /* FeedbackLoopSystem.swift */,
-			);
-			path = GCDFeedback;
-			sourceTree = "<group>";
-		};
 		5B8EB81226ECE90B004C340C /* Data */ = {
 			isa = PBXGroup;
 			children = (
@@ -167,7 +156,6 @@
 			children = (
 				5BE8C99126B6B99D0090DF9D /* AppDelegate.swift */,
 				5BE8C99326B6B99D0090DF9D /* SceneDelegate.swift */,
-				5B66FDE026BEC5CF0009F4D2 /* GCDFeedback */,
 				5B8EB81226ECE90B004C340C /* Data */,
 				5B8EB82326ECE90B004C340C /* Domain */,
 				5B8EB81526ECE90B004C340C /* Presentation */,
@@ -194,6 +182,9 @@
 			dependencies = (
 			);
 			name = Feed;
+			packageProductDependencies = (
+				5BBCB678272ECB5B00FD58F2 /* GCDFeedback */,
+			);
 			productName = Feed;
 			productReference = 5BE8C98E26B6B99D0090DF9D /* Feed.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +213,7 @@
 			);
 			mainGroup = 5BE8C98526B6B99D0090DF9D;
 			packageReferences = (
+				5BBCB677272ECB5B00FD58F2 /* XCRemoteSwiftPackageReference "GCDFeedback" */,
 			);
 			productRefGroup = 5BE8C98F26B6B99D0090DF9D /* Products */;
 			projectDirPath = "";
@@ -258,13 +250,11 @@
 				5B8EB82726ECE90B004C340C /* ListVC+State.swift in Sources */,
 				5BE8C99226B6B99D0090DF9D /* AppDelegate.swift in Sources */,
 				5B8EB82B26ECE90B004C340C /* ListItemCell.swift in Sources */,
-				5B66FDE926BEC5CF0009F4D2 /* FeedbackLoopable.swift in Sources */,
 				5BE8C99426B6B99D0090DF9D /* SceneDelegate.swift in Sources */,
 				5B8EB82526ECE90B004C340C /* FeedItemsRepoImpl.swift in Sources */,
 				5B8EB83E26ECEC3D004C340C /* LoadFeedItemsUseCase.swift in Sources */,
 				5B8EB84026ECEC3D004C340C /* FeedItem.swift in Sources */,
 				5B8EB82E26ECE90B004C340C /* ListScreenIO.swift in Sources */,
-				5B66FDEA26BEC5CF0009F4D2 /* FeedbackLoopSystem.swift in Sources */,
 				5B8EB82A26ECE90B004C340C /* ListView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -457,6 +447,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		5BBCB677272ECB5B00FD58F2 /* XCRemoteSwiftPackageReference "GCDFeedback" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/valnoc/GCDFeedback";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		5BBCB678272ECB5B00FD58F2 /* GCDFeedback */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 5BBCB677272ECB5B00FD58F2 /* XCRemoteSwiftPackageReference "GCDFeedback" */;
+			productName = GCDFeedback;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 5BE8C98626B6B99D0090DF9D /* Project object */;
 }
